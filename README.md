@@ -27,7 +27,7 @@ this guide is to edit those 3 bits using EDID_OVERRIDE.
 3. find the EDID_OVERRIDE folder located in   "Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\DISPLAY\"
   ![e](https://raw.githubusercontent.com/sunurnuts/monitor-power-savings-EDID_OVERRIDE/main/edid%20override%20registry.png)
 4. open the REG_BINARY 0 
-5. check the hex value following the line marked 18 (18 in hex is 24 in decimal, this 24th BYTE location matches the documentation in [wiki](https://en.wikipedia.org/wiki/Extended_Display_Identification_Data#EDID_1.4_data_format), ctrl+f DPMS in wiki it will show bit 7,6,5 in byte 24. this is what you want to change)
+5. check the hex value following the line marked 18 (18 in hex is 24 in decimal, this 24th BYTE location matches the documentation in [wiki](https://en.wikipedia.org/wiki/Extended_Display_Identification_Data#EDID_1.4_data_format), ctrl+f DPMS in wiki it will show BIT 7,6,5 in BYTE 24. these 3 bits are what you want to change)
   ![f](https://raw.githubusercontent.com/sunurnuts/monitor-power-savings-EDID_OVERRIDE/main/edid%20edit%201.png)
 6. convert your HEX value at that location to binary  
 use your calculator in programming mode (win+r, calc, programmer mode (or press alt+3))
