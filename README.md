@@ -32,7 +32,7 @@ this guide is to edit those 3 bits using EDID_OVERRIDE.
 6. convert your HEX value at that location to binary  
 use your calculator in programming mode (win+r, calc, programmer mode (or press alt+3))
   ![g](https://raw.githubusercontent.com/sunurnuts/monitor-power-savings-EDID_OVERRIDE/main/calc%201.png)
-7. check the 3 leading bits (for example my VG248qe has EA(hex)=1110 1010(binary) so mine has 111 as the first 3 which has all the power saving features on.
+7. check the 3 leading bits, these will be what wiki labels as BIT 7, BIT 6, BIT 5 (for example my VG248qe has EA(hex)=1110 1010(binary) so mine has 111 as the first 3 which has all the power saving features on.
 8. change the binary to 0 on all first 3 then convert back to hex (in my case 1110 1010 would need to be changed to 0000 1010(binary)=0A(hex))
   ![h](https://raw.githubusercontent.com/sunurnuts/monitor-power-savings-EDID_OVERRIDE/main/calc%202.png)
 9. you will change 2 registry entries, the value at 18 and the last value in the EDID (all hex values are added together including the last one to make sure the sum ends in 00 hex, so you need to change the last value to get the checksum right)
