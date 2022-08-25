@@ -38,7 +38,7 @@ use your calculator in programming mode (win+r, calc, programmer mode (or press 
 9. you will change 2 registry entries, the value at 18 and the last value in the EDID (all hex values are added together including the last one to make sure the sum ends in 00 hex, so you need to change the last value to get the checksum right)
 10. change your registry in the EDID location at 18(hex)=24(decimal) value to the new one you created (in my case i will change EA to 0A)  
   ![i](https://raw.githubusercontent.com/sunurnuts/monitor-power-savings-EDID_OVERRIDE/main/edid%20change%201.png)
-11. change the very last byte in the EDID registry by incrementing it the same amount you decreased the value in 18(hex)=24(decimal)(in my case i reduced EA by E0 (EA-E0=0A). so i will have to add E0 to the checksum)  
+11. find the difference in the value you just changed (in my example the difference is E0 (since EA was the value before, i replace that value with OA, so EA-0A is the difference). Add this difference to the last BYTE (for me: E0 + B9)
 
   in my example the last byte (last 2 digits in line 78(hex)) was B9. i change it to 99 (B9+E0=199 in hex, which is 99 with the relevant checksum last 2 digits)  
   ![j](https://github.com/sunurnuts/monitor-power-savings-EDID_OVERRIDE/blob/main/edid%20edit%202.png)
